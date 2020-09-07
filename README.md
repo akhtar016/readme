@@ -1,7 +1,7 @@
 # Analytics Microbytes
 A analytics library for tracking page views, custom events, & identify visitors.
 
-##Installation
+## Installation
 Use the package manager [npm] to install Analytics Microbytes.
 
 ```
