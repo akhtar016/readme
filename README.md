@@ -42,3 +42,6 @@ const analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
     });
 
 ```
+
+## Use in React Web App
+
