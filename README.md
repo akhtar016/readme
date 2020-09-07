@@ -15,3 +15,10 @@ import Analytics from "analytics-mirobytes";
 <!-- /* Initialize Analytics */ -->
 window.analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
