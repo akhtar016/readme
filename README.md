@@ -15,7 +15,7 @@ import Analytics from "analytics-mirobytes";
 
 /* Initialize Analytics */
 
-window.analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
+const analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
 
 /* Track Page View */
  
