@@ -12,6 +12,6 @@ npm install analytics-mirobytes
 ```
 import Analytics from "analytics-mirobytes";
 
-/* Initialize Analytics */
+<!--- /* Initialize Analytics */ --->
 window.analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
 
