@@ -12,13 +12,34 @@ npm install analytics-mirobytes
 ```
 import Analytics from "analytics-mirobytes";
 
-<!-- /* Initialize Analytics */ -->
+
+/* Initialize Analytics */
+
 window.analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
+/* Track Page View */
+  useEffect(() => {
+    window.analytics.page({
+      userId: "userId-abc"
+    });
+  }, []);
+  
+  
+/* Track Custom Events */
+    window.analytics.track({
+      userId: "userId-abc",
+      event: "Registration Button Clicked"
+    });
+    
+ /* Identify a visitor */
+    window.analytics.identify({
+      userId: "userId-abc",
+      traits: {
+        name: "username",
+        email: "useremail",
+        plan: "Enterprise",
+        friends: 42
+      },
+    });
+
 ```
