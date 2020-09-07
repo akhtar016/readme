@@ -18,11 +18,10 @@ import Analytics from "analytics-mirobytes";
 window.analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
 
 /* Track Page View */
-  useEffect(() => {
+ 
     window.analytics.page({
       userId: "userId-abc"
     });
-  }, []);
   
   
 /* Track Custom Events */
