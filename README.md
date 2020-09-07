@@ -20,7 +20,7 @@ const analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
 /* Track Page View */
  
     window.analytics.page({
-      userId: "userId-abc"
+      userId: "USER_ID_OF_YOUR_USER"
     });
   
   
@@ -32,10 +32,10 @@ const analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
     
  /* Identify a visitor */
     window.analytics.identify({
-      userId: "userId-abc",
+      userId: "USER_ID_OF_YOUR_USER",
       traits: {
-        name: "username",
-        email: "useremail",
+        name: "NAME_OF_YOUR_USER",
+        email: "EMAIL_OF_YOUR_USER",
         plan: "Enterprise",
         friends: 42
       },
@@ -44,7 +44,7 @@ const analytics = new Analytics("API_KEY_OF_YOUR_PROJECT");
 ```
 
 ## Use in React Web App
-To use this analytics in your react web app, you first have to initialize it into your index.js file
+After installing the analytics, to use this analytics in your react web app, you first have to initialize it into your index.js file
 
 ```
 import React from "react";
@@ -53,7 +53,7 @@ import App from "./App";
 import Analytics from "analytics-mirobytes";
 
 
-window.analytics = new Analytics("8041d345-dbec-4a36-bf6d-a75d497970ab");
+window.analytics = new Analytics("YOUR_PROJECT_API_KEY");
 
 ReactDOM.render(
   <React.StrictMode>
@@ -62,3 +62,36 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
+Now the initialization is done. 
+
+To track pages, you have to use the follwing code -
+```
+  useEffect(() => {
+    window.analytics.page({
+      userId: "USER_ID_OF_YOUR_USER"
+    });
+  }, []);
+```
+
+To track event (e.g button click), you have to use the following code - 
+
+```
+    window.analytics.track({
+      userId: "USER_ID_OF_YOUR_USER",
+      event: "Registration Button Clicked"
+    });
+```
+
+For identifying user, you have to use the following code - 
+
+    window.analytics.identify({
+      userId: "USER_ID_OF_YOUR_USER",
+      traits: {
+        name: "NAME_OF_YOUR_USER",
+        email: "EMAIL_OF_YOUR_USER",
+        plan: "Enterprise",
+        friends: 42
+      },
+    });
+
+NOTE: Don't forget to add the property userId in the object.
